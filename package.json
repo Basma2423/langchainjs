@@ -1,0 +1,26 @@
+{
+  "name": "langchainjs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vector store with Supabase and Hugging Face",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.45",
+    "@supabase/supabase-js": "^2.49.9",
+    "@huggingface/inference": "",
+    "dotenv": "^16.5.0"
+  },
+  "keywords": [
+    "langchain",
+    "supabase",
+    "vector",
+    "embeddings"
+  ],
+  "author": "FlouBsy",
+  "license": "MIT"
+}
