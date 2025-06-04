@@ -11,14 +11,14 @@ const llm = new ChatGroq({
     model:"llama-3.3-70b-versatile"
 })
 
-const standaloneQuestionTemplate = 'Turn the following user question into a standalone quesiton. \
+const template = 'Turn the following user question into a standalone quesiton. \
 question: {question} standalone question:'
 
-const standaloneQuestionPrompt = PromptTemplate.fromTemplate(standaloneQuestionTemplate)
+const  prompt = PromptTemplate.fromTemplate(template)
 
-const standaloneQuestionChain = standaloneQuestionPrompt.pipe(llm)
+const chain = prompt.pipe(llm)
 
-const response = await standaloneQuestionChain.invoke({
+const response = await chain.invoke({
     question: 'what are the technical requriements for running Scrimba? \
     I only have a very old laptop which is not that powerful.'
 })
