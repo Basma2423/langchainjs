@@ -21,7 +21,8 @@ try {
 
   const client = createClient(sbURL, sbAPIKey)
   
-  // pick an embedding model from here: https://huggingface.co/models?pipeline_tag=feature-extraction&sort=trending
+  // pick an embedding model from here:
+  // https://huggingface.co/models?pipeline_tag=feature-extraction&sort=trending
   
   await SupabaseVectorStore.fromDocuments(
     output, 
@@ -35,8 +36,8 @@ try {
     } 
 
   )
-  
-    console.log('Successfully processed and uploaded the documents to Superbase vector store')
+
+    console.log('Successfully processed and uploaded the documents to Supabase vector store')
     console.log(`${output.length} document chunks were created and stored`)
 
 } catch (err) {
